@@ -12,7 +12,7 @@
 #include "memory.h"
 #include "behavior_data.h"
 #include "thread6.h"
-
+#define mario_hitbox 250.0f
 struct LandingAction {
     s16 numFrames;
     s16 unk02;
@@ -114,7 +114,7 @@ void check_ledge_climb_down(struct MarioState *m) {
 
         if (find_wall_collisions(&wallCols) != 0) {
             floorHeight = find_floor(wallCols.x, wallCols.y, wallCols.z, &floor);
-            if (floor != NULL && (wallCols.y - floorHeight > 160.0f)) {
+            if (floor != NULL && (wallCols.y - floorHeight > mario_hitbox)) {
                 wall = wallCols.walls[wallCols.numWalls - 1];
                 wallAngle = atan2s(wall->normal.z, wall->normal.x);
                 wallDYaw = wallAngle - m->faceAngle[1];

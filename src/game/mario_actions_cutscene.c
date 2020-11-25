@@ -27,7 +27,7 @@
 #include "seq_ids.h"
 #include "sound_init.h"
 #include "thread6.h"
-
+#define mario_hitbox 250.0f
 // TODO: put this elsewhere
 enum SaveOption { SAVE_OPT_SAVE_AND_CONTINUE = 1, SAVE_OPT_SAVE_AND_QUIT, SAVE_OPT_CONTINUE_DONT_SAVE };
 
@@ -1496,7 +1496,7 @@ s32 act_squished(struct MarioState *m) {
 
     switch (m->actionState) {
         case 0:
-            if (spaceUnderCeil > 160.0f) {
+            if (spaceUnderCeil > mario_hitbox) {
                 m->squishTimer = 0;
                 return set_mario_action(m, ACT_IDLE, 0);
             }
@@ -1505,7 +1505,7 @@ s32 act_squished(struct MarioState *m) {
 
             if (spaceUnderCeil >= 10.1f) {
                 // Mario becomes a pancake
-                squishAmount = spaceUnderCeil / 160.0f;
+                squishAmount = spaceUnderCeil / mario_hitbox;
                 vec3f_set(m->marioObj->header.gfx.scale, 2.0f - squishAmount, squishAmount,
                           2.0f - squishAmount);
             } else {

@@ -16,7 +16,7 @@
 #include "behavior_data.h"
 #include "level_table.h"
 #include "thread6.h"
-
+#define mario_hitbox 250.0f
 #define MIN_SWIM_STRENGTH 160
 #define MIN_SWIM_SPEED 16.0f
 
@@ -83,7 +83,7 @@ static u32 perform_water_full_step(struct MarioState *m, Vec3f nextPos) {
     }
 
     if (nextPos[1] >= floorHeight) {
-        if (ceilHeight - nextPos[1] >= 160.0f) {
+        if (ceilHeight - nextPos[1] >= mario_hitbox) {
             vec3f_copy(m->pos, nextPos);
             m->floor = floor;
             m->floorHeight = floorHeight;
@@ -95,17 +95,17 @@ static u32 perform_water_full_step(struct MarioState *m, Vec3f nextPos) {
             }
         }
 
-        if (ceilHeight - floorHeight < 160.0f) {
+        if (ceilHeight - floorHeight < mario_hitbox) {
             return WATER_STEP_CANCELLED;
         }
 
         //! Water ceiling downwarp
-        vec3f_set(m->pos, nextPos[0], ceilHeight - 160.0f, nextPos[2]);
+        vec3f_set(m->pos, nextPos[0], ceilHeight - mario_hitbox, nextPos[2]);
         m->floor = floor;
         m->floorHeight = floorHeight;
         return WATER_STEP_HIT_CEILING;
     } else {
-        if (ceilHeight - floorHeight < 160.0f) {
+        if (ceilHeight - floorHeight < mario_hitbox) {
             return WATER_STEP_CANCELLED;
         }
 

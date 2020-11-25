@@ -15,6 +15,7 @@
 #include "goddard/renderer.h"
 #include "interaction.h"
 #include "level_update.h"
+#include "mario.h"
 #include "mario_misc.h"
 #include "memory.h"
 #include "object_helpers.h"
@@ -23,7 +24,7 @@
 #include "save_file.h"
 #include "skybox.h"
 #include "sound_init.h"
-#define mario_hitbox 250.0f
+
 #define TOAD_STAR_1_REQUIREMENT 12
 #define TOAD_STAR_2_REQUIREMENT 25
 #define TOAD_STAR_3_REQUIREMENT 35

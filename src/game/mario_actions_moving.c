@@ -5,6 +5,7 @@
 #include "audio/external.h"
 #include "engine/math_util.h"
 #include "engine/surface_collision.h"
+#include "mario.h"
 #include "mario_step.h"
 #include "area.h"
 #include "interaction.h"
@@ -12,7 +13,7 @@
 #include "memory.h"
 #include "behavior_data.h"
 #include "thread6.h"
-#define mario_hitbox 250.0f
+
 struct LandingAction {
     s16 numFrames;
     s16 unk02;

@@ -1,5 +1,6 @@
 #ifndef MARIO_H
 #define MARIO_H
+#define mario_hitbox 200.0f
 
 #include <PR/ultratypes.h>
 

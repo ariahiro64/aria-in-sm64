@@ -8,7 +8,7 @@
 #include "game_init.h"
 #include "interaction.h"
 #include "mario_step.h"
-#define mario_hitbox 250.0f
+
 static s16 sMovingSandSpeeds[] = { 12, 8, 4, 0 };
 
 struct Surface gWaterSurfacePseudoFloor = {

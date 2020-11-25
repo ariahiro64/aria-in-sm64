@@ -13,7 +13,7 @@
 #include "mario_step.h"
 #include "save_file.h"
 #include "thread6.h"
-#define mario_hitbox 250.0f
+
 void play_flip_sounds(struct MarioState *m, s16 frame1, s16 frame2, s16 frame3) {
     s32 animFrame = m->marioObj->header.gfx.animInfo.animFrame;
     if (animFrame == frame1 || animFrame == frame2 || animFrame == frame3) {

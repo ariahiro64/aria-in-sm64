@@ -16,7 +16,7 @@
 #include "behavior_data.h"
 #include "level_table.h"
 #include "thread6.h"
-#define mario_hitbox 250.0f
+
 #define MIN_SWIM_STRENGTH 160
 #define MIN_SWIM_SPEED 16.0f
 

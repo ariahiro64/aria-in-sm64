@@ -27,7 +27,7 @@
 #include "seq_ids.h"
 #include "sound_init.h"
 #include "thread6.h"
-#define mario_hitbox 250.0f
+
 // TODO: put this elsewhere
 enum SaveOption { SAVE_OPT_SAVE_AND_CONTINUE = 1, SAVE_OPT_SAVE_AND_QUIT, SAVE_OPT_CONTINUE_DONT_SAVE };
 

@@ -1345,7 +1345,7 @@ void update_mario_geometry_inputs(struct MarioState *m) {
             || (m->ceil && m->ceil->flags & SURFACE_FLAG_DYNAMIC)) {
             ceilToFloorDist = m->ceilHeight - m->floorHeight;
 
-            if ((0.0f <= ceilToFloorDist) && (ceilToFloorDist <= 150.0f)) {
+            if ((0.0f <= ceilToFloorDist) && (ceilToFloorDist <= mario_hitbox)) {
                 m->input |= INPUT_SQUISHED;
             }
         }

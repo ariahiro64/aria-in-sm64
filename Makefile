@@ -249,7 +249,7 @@ else
 ifeq ($(VERSION),sh)
   OPT_FLAGS := -O2
 else
-  OPT_FLAGS := -g
+  OPT_FLAGS := -O2
 endif
 endif
 

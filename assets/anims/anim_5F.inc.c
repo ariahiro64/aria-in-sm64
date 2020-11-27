@@ -3,7 +3,7 @@ static const struct Animation anim_5F[] = {
     189,
     0,
     0,
-    0x3C,
+    0x2c, //i reduced the frames
     ANIMINDEX_NUMPARTS(anim_5F_indices),
     anim_5F_values,
     anim_5F_indices,

@@ -3,7 +3,7 @@ static const struct Animation anim_60[] = {
     189,
     0,
     0,
-    0x32,
+    0x2C, //i reduced the frames
     ANIMINDEX_NUMPARTS(anim_60_indices),
     anim_60_values,
     anim_60_indices,

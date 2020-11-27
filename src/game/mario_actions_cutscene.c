@@ -378,14 +378,14 @@ s32 set_mario_npc_dialog(s32 actionArg) {
 // 9 - 22: looking away from npc
 // 23: end
 s32 act_reading_npc_dialog(struct MarioState *m) {
-    s32 headTurnAmount = -384;
+    s32 headTurnAmount = 384;
     s16 angleToNPC;
 
     if (m->actionArg == 2) {
         headTurnAmount = 0;
     }
     if (m->actionArg == 3) {
-        headTurnAmount = - 384;
+        headTurnAmount = 384;
     }
 
     if (m->actionState < 8) {

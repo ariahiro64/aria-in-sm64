@@ -1,7 +1,8 @@
 #ifndef MARIO_H
 #define MARIO_H
 #define mario_hitbox 180.0f
-
+#define mario_focus_level 225.0f
+#define mario_orig_eye_level 125.0f
 #include <PR/ultratypes.h>
 
 #include "macros.h"

@@ -40,10 +40,10 @@ ifeq ($(TARGET_N64),0)
   endif
 
   ifeq ($(TARGET_WINDOWS),1)
-    # On Windows, default to DirectX 11
-    ifneq ($(ENABLE_OPENGL),1)
+    # On Windows, default to opengl
+    ifneq ($(ENABLE_DX11),1)
       ifneq ($(ENABLE_DX12),1)
-        ENABLE_DX11 ?= 1
+        ENABLE_OPENGL ?= 1
       endif
     endif
   else

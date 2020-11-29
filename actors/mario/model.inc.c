@@ -26,11 +26,23 @@ Lights1 mario_cap_v2_lights = gdSPDefLights1(
 	0x0, 0x2D, 0xB,
 	0x0, 0x5A, 0x17, 0x28, 0x28, 0x28);
 
-Lights1 mario_face_1__lights = gdSPDefLights1(
+Lights1 mario_face_1__v2_lights = gdSPDefLights1(
+	0x7F, 0x7F, 0x7F,
+	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
+
+Lights1 mario_face_2_v2_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
 Lights1 mario_face_2_lights = gdSPDefLights1(
+	0x7F, 0x7F, 0x7F,
+	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
+
+Lights1 mario_face_7_v2_lights = gdSPDefLights1(
+	0x7F, 0x7F, 0x7F,
+	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
+
+Lights1 mario_face_1__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFE, 0xFE, 0xFE, 0x28, 0x28, 0x28);
 
@@ -9674,7 +9686,7 @@ Gfx mat_mario_cap_v2[] = {
 };
 
 
-Gfx mat_mario_face_1_[] = {
+Gfx mat_mario_face_1__v2[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -9686,7 +9698,24 @@ Gfx mat_mario_face_1_[] = {
 	gsDPPipeSync(),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
 	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsSPSetLights1(mario_face_1__lights),
+	gsSPSetLights1(mario_face_1__v2_lights),
+	gsSPEndDisplayList(),
+};
+
+
+Gfx mat_mario_face_2_v2[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPTileSync(),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 64, mario_eyes_closed_rgba16),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 7, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
+	gsDPLoadSync(),
+	gsDPLoadTile(7, 0, 0, 252, 124),
+	gsDPPipeSync(),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
+	gsDPSetTileSize(0, 0, 0, 252, 124),
+	gsSPSetLights1(mario_face_2_v2_lights),
 	gsSPEndDisplayList(),
 };
 
@@ -9704,6 +9733,40 @@ Gfx mat_mario_face_2[] = {
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
 	gsDPSetTileSize(0, 0, 0, 252, 124),
 	gsSPSetLights1(mario_face_2_lights),
+	gsSPEndDisplayList(),
+};
+
+
+Gfx mat_mario_face_7_v2[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPTileSync(),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 64, mario_eyes_X_rgba16),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 7, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
+	gsDPLoadSync(),
+	gsDPLoadTile(7, 0, 0, 252, 124),
+	gsDPPipeSync(),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
+	gsDPSetTileSize(0, 0, 0, 252, 124),
+	gsSPSetLights1(mario_face_7_v2_lights),
+	gsSPEndDisplayList(),
+};
+
+
+Gfx mat_mario_face_1_[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPTileSync(),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 64, mario_eyes_Half_rgba16),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 7, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
+	gsDPLoadSync(),
+	gsDPLoadTile(7, 0, 0, 252, 124),
+	gsDPPipeSync(),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
+	gsDPSetTileSize(0, 0, 0, 252, 124),
+	gsSPSetLights1(mario_face_1__lights),
 	gsSPEndDisplayList(),
 };
 
@@ -9963,42 +10026,56 @@ Gfx mario_000_displaylist_mesh_mat_override_metal_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mario_000_displaylist_mesh_mat_override_face_1__1[] = {
+Gfx mario_000_displaylist_mesh_mat_override_face_1__v2_1[] = {
 	gsSPDisplayList(mat_mario_hair_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_0),
 	gsSPDisplayList(mat_mario_mouth_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_1),
 	gsSPDisplayList(mat_mario_ear_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_2),
-	gsSPDisplayList(mat_mario_face_0_v2),
+	gsSPDisplayList(mat_mario_face_1__v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_3),
 	gsSPDisplayList(mat_mario_cap_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_4),
 	gsSPEndDisplayList(),
 };
 
-Gfx mario_000_displaylist_mesh_mat_override_face_2_2[] = {
+Gfx mario_000_displaylist_mesh_mat_override_face_2_v2_2[] = {
 	gsSPDisplayList(mat_mario_hair_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_0),
 	gsSPDisplayList(mat_mario_mouth_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_1),
 	gsSPDisplayList(mat_mario_ear_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_2),
-	gsSPDisplayList(mat_mario_face_0_v2),
+	gsSPDisplayList(mat_mario_face_2_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_3),
 	gsSPDisplayList(mat_mario_cap_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_4),
 	gsSPEndDisplayList(),
 };
 
-Gfx mario_000_displaylist_mesh_mat_override_face_7_3[] = {
+Gfx mario_000_displaylist_mesh_mat_override_face_2_3[] = {
 	gsSPDisplayList(mat_mario_hair_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_0),
 	gsSPDisplayList(mat_mario_mouth_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_1),
 	gsSPDisplayList(mat_mario_ear_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_2),
-	gsSPDisplayList(mat_mario_face_0_v2),
+	gsSPDisplayList(mat_mario_face_2),
+	gsSPDisplayList(mario_000_displaylist_mesh_tri_3),
+	gsSPDisplayList(mat_mario_cap_v2),
+	gsSPDisplayList(mario_000_displaylist_mesh_tri_4),
+	gsSPEndDisplayList(),
+};
+
+Gfx mario_000_displaylist_mesh_mat_override_face_7_v2_4[] = {
+	gsSPDisplayList(mat_mario_hair_v2),
+	gsSPDisplayList(mario_000_displaylist_mesh_tri_0),
+	gsSPDisplayList(mat_mario_mouth_v2),
+	gsSPDisplayList(mario_000_displaylist_mesh_tri_1),
+	gsSPDisplayList(mat_mario_ear_v2),
+	gsSPDisplayList(mario_000_displaylist_mesh_tri_2),
+	gsSPDisplayList(mat_mario_face_7_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_3),
 	gsSPDisplayList(mat_mario_cap_v2),
 	gsSPDisplayList(mario_000_displaylist_mesh_tri_4),

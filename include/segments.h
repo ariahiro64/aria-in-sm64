@@ -45,10 +45,10 @@
  */
 
 #define SEG_BUFFERS      0x8005C000 // 0x0085000 in size
-#define SEG_MAIN         0x800E1000 // 0x0132800 in size
-#define SEG_ENGINE       0x80213800 // 0x0017000 in size
-#define SEG_FRAMEBUFFERS 0x8024A800 // 0x0070800 in size
-#define SEG_POOL_START   0x802BB000 // 0x0165000 in size
+#define SEG_MAIN         0x800F1000 // 0x0132800 in size
+#define SEG_ENGINE       0x80223800 // 0x0017000 in size
+#define SEG_FRAMEBUFFERS 0x8025A800 // 0x0070800 in size
+#define SEG_POOL_START   0x802CB000 // 0x0165000 in size
 #define SEG_POOL_END     0x80800000
 #define SEG_POOL_END_4MB 0x80400000 // For the error message screen enhancement.
 #define SEG_GODDARD      SEG_POOL_START + 0x113000

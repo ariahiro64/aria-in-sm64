@@ -22,7 +22,7 @@ TARGET_N64 ?= 0
 # Build for Emscripten/WebGL
 TARGET_WEB ?= 0
 # Compiler to use (ido or gcc)
-COMPILER ?= gcc
+COMPILER ?= ido
 
 # Automatic settings only for ports
 ifeq ($(TARGET_N64),0)

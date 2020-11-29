@@ -145,7 +145,6 @@ SECTIONS
       BUILD_DIR/src/game/obj_behaviors.o(.text);
       BUILD_DIR/src/game/obj_behaviors_2.o(.text);
       BUILD_DIR/src/game/texscroll.o(.text);
-      
       BUILD_DIR/src/audio/synthesis.o(.text);
       BUILD_DIR/src/audio/heap.o(.text);
       BUILD_DIR/src/audio/load.o(.text);
@@ -156,7 +155,6 @@ SECTIONS
       BUILD_DIR/src/audio/port_eu.o(.text);
 
 #if defined(VERSION_EU) || defined(VERSION_SH)
-      build/eu/libultra.a:guLookAtRef.o(.text)
       BUILD_DIR/libultra.a:string.o(.text);
       BUILD_DIR/libultra.a:_Printf.o(.text);
       BUILD_DIR/libultra.a:llmuldiv.o(.text);
@@ -264,6 +262,7 @@ SECTIONS
       BUILD_DIR/libultra.a:func_802F7140.o(.text)
       BUILD_DIR/libultra.a:func_802F71A0.o(.text)
       BUILD_DIR/libultra.a:func_802F71F0.o(.text)
+      BUILD_DIR/libultra.a:guLookAtRef.o(.text);
       BUILD_DIR/lib/rsp.o(.text);
 #else
       BUILD_DIR/src/game*.o(.text);

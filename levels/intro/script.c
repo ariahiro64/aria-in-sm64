@@ -37,7 +37,12 @@ const LevelScript level_intro_entry_1[] = {
     CMD2A(/*unk2*/ 1),
     CLEAR_LEVEL(),
     SLEEP(/*frames*/ 2),
+#ifdef TARGET_N64
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_entry_2),
+#else
+    EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, script_intro_L1),
+#endif
+
 };
 
 const LevelScript level_intro_entry_2[] = {

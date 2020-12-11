@@ -19,7 +19,7 @@
 
 #define SEG_GODDARD      0x8016F000
 
-#define SEG_BUFFERS      0x801C1000
+#define SEG_BUFFERS      0x801C5000
 
 #ifdef VERSION_EU
 #define SEG_MAIN         0x80241800 // TODO: Investigate why it's different?
@@ -51,7 +51,7 @@
 #define SEG_POOL_START   0x802CB000 // 0x0165000 in size
 #define SEG_POOL_END     0x80800000
 #define SEG_POOL_END_4MB 0x80400000 // For the error message screen enhancement.
-#define SEG_GODDARD      SEG_POOL_START + 0x113000
+#define SEG_GODDARD      SEG_POOL_START + 0x110000
 #endif
 
 #endif // SEGMENTS_H

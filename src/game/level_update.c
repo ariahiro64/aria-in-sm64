@@ -832,7 +832,11 @@ void initiate_delayed_warp(void) {
             switch (sDelayedWarpOp) {
                 case WARP_OP_GAME_OVER:
                     save_file_reload();
+#ifdef TARGET_N64
                     warp_special(-3);
+#else
+                     warp_special(-10);
+#endif
                     break;
 
                 case WARP_OP_CREDITS_END:

@@ -127,23 +127,43 @@ const LevelScript level_main_scripts_entry[] = {
 };
 
 static const LevelScript script_L1[] = {
+#ifdef TARGET_N64
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_entry_1),
+#else
+EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_main_menu_entry_1),
+#endif
 };
 
 static const LevelScript script_L2[] = {
+#ifdef TARGET_N64
     EXIT_AND_EXECUTE(/*seg*/ 0x0E, _endingSegmentRomStart, _endingSegmentRomEnd, level_ending_entry),
+#else
+    EXIT_AND_EXECUTE(/*seg*/ 0x0E, _endingSegmentRomStart, _endingSegmentRomEnd,  level_main_menu_entry_1),
+#endif
 };
 
 static const LevelScript script_L3[] = {
+#ifdef TARGET_N64
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_entry_2),
+#else
+    EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd,  level_main_menu_entry_1),
+#endif
 };
 
 static const LevelScript script_L4[] = {
+#ifdef TARGET_N64
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_entry_3),
+#else
+    EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd,  level_main_menu_entry_1),
+#endif
 };
 
 static const LevelScript script_L5[] = {
+#ifdef TARGET_N64
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, level_intro_entry_4),
+#else
+    EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd,  level_main_menu_entry_1),
+#endif
 };
 
 // Include the level jumptable.

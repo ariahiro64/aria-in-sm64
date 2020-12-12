@@ -8,7 +8,7 @@
 #include "../shape_helper.h"
 
 /* @ 04004F90 */
-struct DynList dynlist_mario_master[1321] = {
+struct DynList dynlist_mario_master[1317] = {
     StartList(),
     UseIntId(TRUE),
     StartGroup(1000),
@@ -874,10 +874,6 @@ struct DynList dynlist_mario_master[1321] = {
             SetScale(1.0, 1.0, 1.0),
             SetRotation(-6.873, 0.206, -97.461),
             SetAttachOffset(0.0, 0.0, 0.0),
-            SetSkinWeight(81, 2.6666665449738503),
-            SetSkinWeight(120, 1.4545454643666744),
-            SetSkinWeight(370, 1.9999999552965164),
-            SetSkinWeight(407, 2.6666665449738503),
             SetSkinWeight(429, 16.0),
             AttachNetToJoint(0, 103),
             SetScale(1.0, 1.0, 1.0),

@@ -42,7 +42,6 @@ const LevelScript level_intro_entry_1[] = {
 #else
     EXIT_AND_EXECUTE(/*seg*/ 0x14, _introSegmentRomStart, _introSegmentRomEnd, script_intro_L1),
 #endif
-
 };
 
 const LevelScript level_intro_entry_2[] = {

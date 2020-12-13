@@ -3192,7 +3192,7 @@ void gd_init(void) {
     remove_all_timers();
 
     start_memtracker("Static DL");
-    sStaticDl = new_gd_dl(0, 2283, 4807, 1, 300, 8);
+    sStaticDl = new_gd_dl(0, 2484, 5229, 1, 300, 8);
     stop_memtracker("Static DL");
 
     start_memtracker("Dynamic DLs");
